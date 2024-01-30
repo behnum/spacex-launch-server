@@ -3,6 +3,8 @@ const app = require('./server')
 
 jest.mock('axios')
 
+// console.error = jest.fn() // jff: mute all console.error calls?
+
 describe('GET /random-launch-image', () => {
   it('should return a link to a random Flickr image', async () => {
     // Mock the Axios module's get function for a successful response

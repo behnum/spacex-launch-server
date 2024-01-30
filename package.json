@@ -1,0 +1,15 @@
+{
+  "name": "spacex-launch-server",
+  "version": "1.0.0",
+  "description": "a Node.js server with 1 endpoint that gets data from SpaceX public API",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "nodejs",
+    "spacex"
+  ],
+  "author": "Behnam Baharmand",
+  "license": "MIT"
+}

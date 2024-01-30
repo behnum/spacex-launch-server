@@ -34,4 +34,14 @@ describe('GET /random-launch-image', () => {
     expect(response.status).toBe(404)
     expect(response.body).toHaveProperty('error', 'No launches with Flickr images available')
   })
+
+  it('should handle errors when fetching data from SpaceX API', async () => {
+    // Mock the Axios module's get function to simulate an error
+    const axios = require('axios')
+    axios.get.mockRejectedValue(new Error('Network Error'))
+
+    const response = await request(app).get('/random-launch-image')
+    expect(response.status).toBe(500)
+    expect(response.body).toHaveProperty('error', 'Internal server error')
+  })
 })

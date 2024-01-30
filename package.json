@@ -4,12 +4,19 @@
   "description": "a Node.js server with 1 endpoint that gets data from SpaceX public API",
   "main": "server.js",
   "scripts": {
-    "test": "jest"
+    "start": "nodemon server.js",
+    "test": "jest --watchAll --env=node"
   },
   "keywords": [
     "nodejs",
     "spacex"
   ],
   "author": "Behnam Baharmand",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "express": "^4.18.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  }
 }
